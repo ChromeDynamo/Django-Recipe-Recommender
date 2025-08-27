@@ -1,9 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
-from django.db import models
-
 class Ingredient(models.Model):
     name = models.CharField(max_length=100, unique=True)
 
@@ -20,6 +16,7 @@ class Recipe(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     ingredients = models.ManyToManyField(Ingredient, related_name="recipes")
+    guide = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

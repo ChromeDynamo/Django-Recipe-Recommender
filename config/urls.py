@@ -26,5 +26,8 @@ router.register(r"recipes", RecipeViewSet, basename="recipe")
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include(router.urls)),
+    path("", include("recipes.urls")),
+
 ]
+
 

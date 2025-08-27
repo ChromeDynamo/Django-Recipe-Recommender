@@ -6,7 +6,6 @@ class IngredientSerializer(serializers.ModelSerializer):
         model = Ingredient
         fields = ["id", "name"]
 
-
 class RecipeSerializer(serializers.ModelSerializer):
     ingredient_names = serializers.ListField(
         child=serializers.CharField(),
@@ -17,7 +16,7 @@ class RecipeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Recipe
-        fields = ["id", "title", "description", "ingredients", "ingredient_names", "created_at"]
+        fields = ["id", "title", "description", "ingredients", "ingredient_names", "guide", "created_at"]
 
     def _get_or_create_ingredients(self, names):
         objs = []

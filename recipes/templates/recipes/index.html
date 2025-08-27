@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Recommender</title>
+    <link rel="stylesheet" href="{% static 'recipes/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🍳 Recipe Recommender</h1>
+            <p>Select the ingredients you have and find recipes!</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="input-section">
+                <div id="ingredients-list">
+                    <!-- Ingredients checkboxes will appear here -->
+                </div>
+                <button id="searchBtn">Search Recipes</button>
+            </div>
+
+            <div id="results" class="results-grid">
+                <!-- Recipe cards appear here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Recipe Recommender. Made with ❤️</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'recipes/script.js' %}"></script>
+</body>
+</html>

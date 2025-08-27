@@ -68,8 +68,8 @@ ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        'DIRS': [BASE_DIR / "recipes/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,6 +80,9 @@ TEMPLATES = [
         },
     },
 ]
+
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [BASE_DIR / "recipes/static"]
 
 WSGI_APPLICATION = 'config.wsgi.application'
 

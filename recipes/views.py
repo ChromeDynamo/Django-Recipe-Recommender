@@ -49,3 +49,7 @@ class RecipeViewSet(viewsets.ModelViewSet):
 
         serializer = self.get_serializer(qs, many=True)
         return Response(serializer.data)
+
+
+def home(request):
+    return render(request, "recipes/index.html")
